@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Pratica {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.println("Digite o valor que está na sua conta");
+        double total = sc.nextDouble();
+
+        //Valores fixos
+        int gasolina = 300;
+        int xp = 322;
+
+
+        double futuro;
+        do {
+            System.out.println("Quanto você quer guardar para planos futuros?");
+            futuro = sc.nextDouble();
+
+            if (futuro < 300) {
+                System.out.println("O valor deve ser maior ou igual a 300. Tente novamente.");
+            }
+
+        } while (futuro < 300);
+        double soma = (xp + futuro);
+        double resto = (total - gasolina - xp - futuro);
+
+        System.out.println();
+        System.out.println("O valor para gasolina ficou de R$"+gasolina);
+        System.out.println("O valor para investimentos na XP ficou de R$" +xp);
+        System.out.println("O valor para planos futuros ficou de R$" +futuro);
+        System.out.println("Você deve mandar o valor de R$" + soma + " para a XP");
+        System.out.println("\nVocê tem para si nesse mês R$"+resto);
+
+    }
+}
